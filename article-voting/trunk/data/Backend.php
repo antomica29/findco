@@ -37,12 +37,7 @@ class Backend extends ArticleVoting
         //get voting counts
         $counts = $this->getVotingCounts(get_post_meta($post->ID, 'votes', true));
 
-        //some style
-        $styleBG = 'position: absolute; height: 100%;';
-        $styleDiv = 'position: relative; z-index: 5; padding-left: 4px';
-
         //showing data in the meta box
-        echo "<div style='position: relative'><div style='" . $styleBG . "; width:" . $counts['yes'] . "%; background: #77d177'></div> <div style='" . $styleDiv . "'><b>Yes Votes: </b>" . $counts['yes'] . "% </div></div><br>
-        <div style='position: relative'><div style='" . $styleBG . "; width:" . $counts['no'] . "%; background: #e77171'></div> <div style='" . $styleDiv . "'><b>No Votes: </b>" . $counts['no'] . "% </div></div>";
+        include plugin_dir_path(__DIR__) . 'views/widget.php';
     }
 }
