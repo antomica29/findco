@@ -15,3 +15,13 @@ require_once plugin_dir_path(__FILE__) . 'data/ArticleVoting.php';
  * @var ArticleVoting $article_voting_plugin An instance of the main ArticleVoting class.
  */
 $article_voting_plugin = new ArticleVoting();
+
+// Check if in the backend area and single page
+if (is_admin()) {
+    require_once plugin_dir_path(__FILE__) . 'data/Backend.php';
+
+    /**
+     * @var Backend $backend An instance of the Backend class.
+     */
+    $backend = new Backend();
+}
