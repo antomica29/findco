@@ -1,0 +1,59 @@
+.article-voting {
+    margin-top: 50px;
+}
+
+.article-voting > div {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.article-voting > svg {
+    margin-right: 8px;
+}
+
+.article-voting .vote_button {
+    border: solid 1px #999;
+    width: 100px;
+    color: #999;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 4px 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.article-voting:not(.voted) .vote_button:hover {
+    border: solid 1px #555;
+    color: #555;
+}
+
+.article-voting:not(.voted) .vote_button:hover svg .circle {
+    fill: #555;
+}
+
+.article-voting.voted .vote_button {
+    cursor: auto;
+    border: 0;
+}
+
+.article-voting .vote_button.voted {
+    border: solid 1px blue;
+}
+
+.article-voting .vote_button.voted svg .circle {
+    fill: blue;
+}
+
+@media (max-width: 768px) {
+    .article-voting{
+        text-align: center;
+    }
+
+    .article-voting .question{
+        display: block;
+        margin-bottom: 16px;
+    }
+}
