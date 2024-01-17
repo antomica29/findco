@@ -5,6 +5,11 @@
 .article-voting > div {
     display: inline-block;
     text-transform: uppercase;
+    font-weight: bold;
+}
+
+.article-voting .question{
+    margin-right: 16px;
 }
 
 .article-voting > svg {
@@ -14,7 +19,7 @@
 .article-voting .vote_button {
     border: solid 1px #999;
     width: 100px;
-    color: #999;
+    color: #444;
     border-radius: 4px;
     margin: 0 4px;
     padding: 4px 0;
@@ -23,6 +28,7 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
+    font-weight: bold;
 }
 
 .article-voting:not(.voted) .vote_button:hover {
@@ -55,5 +61,6 @@
     .article-voting .question{
         display: block;
         margin-bottom: 16px;
+        margin-right: 0;
     }
 }
