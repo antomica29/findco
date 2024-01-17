@@ -61,7 +61,7 @@ class ArticleVoting
     public function articleVotingEnqueueScript()
     {
         wp_enqueue_style('article_voting_style', plugin_dir_url(__DIR__) . 'src/article_voting_style.css');
-        wp_enqueue_script('article_voting_script', plugin_dir_url(__DIR__) . 'src/article_voting_script.js', array(), time());
+        wp_enqueue_script('article_voting_script', plugin_dir_url(__DIR__) . 'src/article_voting_script.js', array(), "1.0.0");
     }
 
     /**
